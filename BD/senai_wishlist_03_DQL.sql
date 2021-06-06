@@ -1,0 +1,8 @@
+-- DQL
+
+USE WISHLISTS;
+GO
+
+SELECT * FROM Usuarios;
+
+SELECT * FROM Desejos;

@@ -1,0 +1,444 @@
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Righteous&display=swap');
+
+
+
+/* RESET */
+
+/* reseta algumas informações */
+body, h1, h2, p, ul, li, a{
+    /* tira as margens padrão (deixa as coisas mais coladas) */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* atribui novas configurações para o body */
+body{
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+
+/* aqui remove os estilos das listas */
+ul{
+    list-style: none;
+}
+
+/* aqui remove o text-decoration */
+a{
+    text-decoration: none;
+}
+
+/* atribui novas configurações para as img */
+img{
+    /* faz com que todas as imagens sejam display: block */
+    display: block;
+    /* faz com que tenham uma largura máxima de 100% para que elas não estourem o container (ajuda na responsividade) */
+    max-width: 100%;
+}
+
+/* atribui à todas as tags do site um nova configuração */
+*{
+    /* não entendi */
+    box-sizing: border-box;
+}
+
+:root{
+    --scrollbarBg: linear-gradient(132.36deg, #cec3c3 -50.64%, rgba(255, 255, 255, 0) 163.53%), #e0e0e0;
+}
+
+
+
+body{
+    background-color: #6C7D8E;
+}
+
+/* MENU */
+
+.menu-bg{
+    background-color: #364958;
+    box-shadow: 0 4px 10px 0 #3f3f3f;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo{
+    max-width: 58px;
+    margin-left: 15px;
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-nav li{
+    padding: 0 40px;
+}
+
+.menu-nav a{
+    font-family: 'Righteous', Helvetica, sans-serif;
+    font-size: 1.25em;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu-nav li:nth-child(1){
+    line-height: 1.4;
+}
+
+.menu-nav li:nth-child(2){
+    line-height: 0.1;
+    padding: 0;
+}
+
+.menu-nav li:nth-child(2)::after{
+    content: '';
+    display: block;
+    border-bottom: 14px solid #F7BD12;
+}
+
+.menu-nav li:nth-child(3){
+    margin-right: -40px;
+}
+
+
+
+/* WISHLIST */
+
+.wishlist{
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+/* LISTAR */
+
+.listar-bg{
+    background-color: #ED254E;
+    width: 406px;
+    height: 714px;
+    margin-top: 40px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: -3px 5px 15px 0 #3f3f3f;
+}
+
+.listar-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 22px 22px 20px;
+    user-select: none;
+}
+
+.listar-menu button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #364958;
+    width: 55px;
+    height: 55px;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+.listar-menu h1{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: white;
+    content: '';
+    display: block;
+    border-bottom: 14px solid #F7BD12;
+}
+
+.listar-lista-bg{
+    background-color: white;
+    width: 362px;
+    height: 587px;
+    margin: 22px 22px 22px 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    overflow-y: auto;
+}
+
+.listar-lista-bg::-webkit-scrollbar{
+    width: 10px;
+    background: white;
+}
+
+.listar-lista-bg::-webkit-scrollbar-track{
+    width: 25px;
+    background: white;
+    /* border-radius: 10px; */
+    margin: 5px 0 5px 0;
+    background-color: white;
+}
+
+.listar-lista-bg::-webkit-scrollbar-thumb{
+    background-color: #364958;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.lista-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 26px 17px;
+}
+
+.desejos{
+    display: block;
+    width: 328px;
+    height: 308px;
+    /* background-color: red; */
+    border-radius: 14px;
+    background: linear-gradient(132.36deg, #f1f1f1 -50.64%, rgba(255, 255, 255, 0) 163.53%), #FFFFFF;
+    box-shadow: -3px 6px 10px 0 #999999;
+    /* padding: 7px 11px 0 11px; */
+    margin-bottom: 26px;
+}
+
+.desejos-conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    /* position: absolute; */
+}
+
+.desejos-data-bg{
+    padding: 7px 11px 0 11px;
+    background-color: #364958;
+    width: 283px;
+    height: 35px;
+    border-top-left-radius: 14px;
+}
+
+.desejos-data{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125em;
+    font-family: 'Righteous', Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 13px;
+    user-select: none;
+}
+
+.desejos-tipo-bg{
+    width: 45px;
+    height: 308px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-color: #F7BD12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desejos-tipo{
+    transform: rotate(-90deg);
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    user-select: none;
+}
+
+.desejos-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.desejos-texto{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #757575;
+    width: 260px;
+    height: 175px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.desejos-btns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.desejos-btns img{
+    user-select: none;
+}
+ 
+.desejos-btns button:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #364958;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+.desejos-btns button:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #364958;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+.desejos-btns button:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #364958;
+    color: white;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    width: 120px;
+    height: 55px;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+
+
+/* FITINHA */
+
+.fitinha{
+    margin-top: 35px;
+}
+
+
+
+/* CADASTRAR */
+
+.cadastrar-bg{
+    background-color: #364958;
+    width: 406px;
+    height: 714px;
+    margin-top: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 3px 5px 15px 0 #3f3f3f;
+}
+
+
+.cadastrar-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 22px 22px 22px 20px;
+    user-select: none;
+}
+
+.cadastrar-menu h1{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: white;
+    content: '';
+    display: block;
+    border-bottom: 14px solid #F7BD12;
+}
+
+.cadastrar-cadastro-bg{
+    background-color: white;
+    width: 362px;
+    height: 587px;
+    margin: 22px 22px 22px 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.cadastro-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 26px 17px;
+}
+
+.cadastro-form input{
+    max-width: auto;
+    height: 308px;
+}
+
+.cadastro-form textarea{
+    display: block;
+    flex-wrap: wrap;
+    margin-bottom: 26px;
+    padding: 17px 11px 0 11px;
+    max-width: 328px;
+    height: 308px;
+    color: #757575;
+    border: none;
+    font-size: 1.25em;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: 600;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    box-shadow: 3px 6px 10px 0 #999999;
+    resize: none;
+    background: linear-gradient(132.36deg, #f1f1f1 -50.64%, rgba(255, 255, 255, 0) 163.53%), #FFFFFF;
+}
+
+.cadastro-form textarea:focus{
+    outline: none;
+}
+
+.cadastro-form button{
+    width: 328px;
+    height: 85px;
+    background-color: #F7BD12;
+    color: white;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.9em;
+    border: none;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    box-shadow: 3px 6px 10px 0 #999999;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastro-form button:disabled{
+    background-color: #364958;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>WishList</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="menu-bg">
+        <div class="menu">
+            <div class="menu-logo">
+                <a href="/"><img src="assets/img/logo.svg" alt="Logo do WishList"></a>
+            </div>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li><a>Bem vindo(a)<br><span>luqonhas</span></a></li>
+                    <li><a href="/">Meus Desejos</a></li>
+                    <li><a href="/"><img src="assets/img/sair.svg" alt="Imagem do botão de sair"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="wishlist">
+        <section class="listar-bg">
+            <form class="listar">
+                <div class="listar-menu">
+                    <button type="submit"><img src="assets/img/ordenagem.svg" alt="Simbolo para o botão de ordenar"></button>
+                    <h1>Listar Desejos</h1>
+                </div>
+
+                <div class="listar-lista-bg">
+                    <div class="lista-form">
+
+                        <div class="desejos">
+                            <div class="desejos-conteudo">
+                                <div class="desejos-data-bg">
+                                    <div class="desejos-data">
+                                        <p>Adicionado em: </p>
+                                        <p>05/06/2021</p>
+                                    </div>
+                                    <div class="desejos-texto">
+                                        <p>Lucas ipsum dolor sit amet qui-gon feeorin wroonian adi plagueis zann subterrel solo lars darth...</p>
+                                    </div>
+                                    <div class="desejos-btns">
+                                        <button type="button" onclick="deletar()"><img src="assets/img/lixeira.svg" alt="Lixeira no botão de deletar"></button>
+                                        <button type="button" ><img src="assets/img/coração-off.svg" alt="Coração no botão de favoritar"></button>
+                                        <button type="submit">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="desejos-tipo-bg">
+                                    <div class="desejos-tipo">
+                                        <p>Favorito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="desejos">
+                            <div class="desejos-conteudo">
+                                <div class="desejos-data-bg">
+                                    <div class="desejos-data">
+                                        <p>Adicionado em: </p>
+                                        <p>05/06/2021</p>
+                                    </div>
+                                    <div class="desejos-texto">
+                                        <p>Lucas ipsum dolor sit amet qui-gon feeorin wroonian adi plagueis zann subterrel solo lars darth...</p>
+                                    </div>
+                                    <div class="desejos-btns">
+                                        <button type="submit"><img src="assets/img/lixeira.svg" alt="Lixeira no botão de deletar"></button>
+                                        <button type="submit"><img src="assets/img/coração-off.svg" alt="Coração no botão de favoritar"></button>
+                                        <button type="submit">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="desejos-tipo-bg">
+                                    <div class="desejos-tipo">
+                                        <p>Favorito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <div class="fitinha"><img src="assets/img/fita.svg" alt="Fita de separação entre capas"></div>
+
+        <section class="cadastrar-bg">
+            <form class="cadastrar">
+                <div class="cadastrar-menu">
+                    <h1>Cadastrar Desejos</h1>
+                </div>
+
+                <div class="cadastrar-cadastro-bg">
+                    <div class="cadastro-form">
+                        <textarea required maxlength="126" type="text" name="desejo" id="desejo" cols="2" rows="5" placeholder="Descrição do desejo..."></textarea>
+                        <!-- <input type="text" placeholder="Descrição do desejo..."> -->
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <script>
+        function deletar(){
+            Swal.fire({
+                title: 'Tem certeza?',
+                text: "Você não poderá reverter isso!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#364958',
+                cancelButtonColor: '#ED254E',
+                confirmButtonText: 'Sim, exclua!'
+            })
+            
+            .then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                    'Excluído!',
+                    'Seu desejo foi excluído.',
+                    'success'
+                    )
+                }
+            })
+        }
+        
+        
+    </script>
+</body>
+</html>
