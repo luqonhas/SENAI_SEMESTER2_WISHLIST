@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST2\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST2\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj": {
+    "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST2\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj",
         "projectName": "senai_wishlist_webAPI",
-        "projectPath": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST2\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\senai_wishlist_webAPI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST2\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\SENAI\\ATVIDADES\\SENAI_SEMESTER2_WISHLIST\\BACKEND\\senai_wishlist_webAPI\\senai_wishlist_webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

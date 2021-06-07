@@ -18,10 +18,10 @@ class Desejos extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listaDesejos : [],
+      desejos : [],
       descricao : '',
-      data : Date(),
-      ordenagem : []
+      ordenado : false,
+
     };
   }
 
@@ -30,7 +30,7 @@ class Desejos extends Component {
 
     .then((resposta) => resposta.json())
 
-    .then((data) => this.setState({ listaDesejos : data }))
+    .then((data) => this.setState({ desejos : data }))
 
     .catch((erro) => console.log(erro));
   };
@@ -40,15 +40,11 @@ class Desejos extends Component {
   cadastrarDesejos = (event) => {
       event.preventDefault();
 
-    //   this.setState({
-    //       data : new Date()
-    //   })
-
       fetch('http://localhost:5000/api/desejos', {
 
         method: 'POST', 
 
-        body: JSON.stringify({descricao : this.state.descricao, dataCriacao : this.state.data}),
+        body: JSON.stringify({descricao : this.state.descricao, dataCriacao : new Date().toJSON()}),
 
         headers: {
             "Content-Type" : "application/json"
@@ -68,8 +64,7 @@ class Desejos extends Component {
 
   limparCampos = () => {
     this.setState({
-        descricao : '',
-        data : ''
+        descricao : ''
     })
   }
 
@@ -151,7 +146,7 @@ class Desejos extends Component {
             <section className="listar-bg">
                 <form className="listar">
                     <div className="listar-menu">
-                        <button ><img src={ordenagem} /></button>
+                        <button onClick={() => {this.setState({ordenado : !this.state.ordenado}); this.listarDesejos()}}><img src={ordenagem} /></button>
                         <h1>Listar Desejos</h1>
                     </div>
 
@@ -183,31 +178,33 @@ class Desejos extends Component {
                             </div> */}
 
                             {
-                                this.state.listaDesejos.map((desejo) => {
-                                    return(
-                                        <div className="desejos">
-                                            <div className="desejos-conteudo" key={desejo.idDesejo}>
-                                                <div className="desejos-data-bg">
-                                                    <div className="desejos-data">
-                                                        <p>Adicionado em:</p>
-                                                        <p>{DataFormatada(desejo.dataCriacao)}</p>
-                                                    </div>
-                                                    <div className="desejos-texto">
-                                                        <p>{desejo.descricao}</p>
-                                                    </div>
-                                                    <div className="desejos-btns">
-                                                        <button onClick={() => this.excluirDesejo(desejo)}><img src={lixeira} /></button>
-                                                        <button type="submit"><img src={coracaoff} /></button>
-                                                        <button type="submit">Editar</button>
-                                                    </div>
-                                                </div>
-                                                <div className="desejos-tipo-bg">
-                                                    <div className="desejos-tipo">
-                                                        <p>Favorito</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                              this.state.ordenado && this.state.desejos.sort((a, b) => b.idDesejo - a.idDesejo),
+
+                              this.state.desejos.map((desejo) => {
+                                  return(
+                                      <div className="desejos">
+                                          <div className="desejos-conteudo" key={desejo.idDesejo}>
+                                              <div className="desejos-data-bg">
+                                                  <div className="desejos-data">
+                                                      <p>Adicionado em:</p>
+                                                      <p>{new Date(desejo.dataCriacao).toLocaleDateString()}</p>
+                                                  </div>
+                                                  <div className="desejos-texto">
+                                                      <p>{desejo.descricao}</p>
+                                                  </div>
+                                                  <div className="desejos-btns">
+                                                      <button onClick={() => this.excluirDesejo(desejo)}><img src={lixeira} /></button>
+                                                      <button type="submit"><img src={coracaoff} /></button>
+                                                      <button type="submit">Editar</button>
+                                                  </div>
+                                              </div>
+                                              <div className="desejos-tipo-bg">
+                                                  <div className="desejos-tipo">
+                                                      <p>Favorito</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
                                     )
                                 })
                             }
@@ -229,7 +226,7 @@ class Desejos extends Component {
                     
                     <div className="cadastrar-cadastro-bg">
                         <div className="cadastro-form">
-                            <textarea value={this.state.descricao} onChange={this.atualizaEstadoDescricao} required maxlength="126" type="text" name="desejo" id="desejo" cols="2" rows="5" placeholder="Descrição do desejo..."></textarea>
+                            <textarea className="textarea" value={this.state.descricao} onChange={this.atualizaEstadoDescricao} required maxlength="126" type="text" name="desejo" id="desejo-textarea" cols="2" rows="5" placeholder="Descrição do desejo..."></textarea>
                             <button type="submit" disabled={this.state.descricao === '' ? 'none' : ''}>Cadastrar</button>
                         </div>
                     </div>
