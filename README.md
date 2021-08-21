@@ -1,2 +1,2 @@
-# SENAI_SEMESTER2_WISHLIST
-Secondary project of the 2nd SEMESTER called “WishList”. (in progress...)
+# SENAI_SEMESTRE2_WISHLIST
+Projeto secundário do 2º SEMESTRE denominado “WishList”.
